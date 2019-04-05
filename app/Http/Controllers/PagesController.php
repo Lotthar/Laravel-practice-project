@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 // Resursi 
 // Ovdes se preko Ruta dolazi do straica i njihovih view-ova
+// Kontroler za stranice koji smo napravili da nam kontrolise stranice koje
+// Koristimo
 class PagesController extends Controller
 {
     public function index() {
