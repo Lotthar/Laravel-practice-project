@@ -9,6 +9,14 @@ use Illuminate\Http\Request;
 // Koristimo
 class PagesController extends Controller
 {
+    public function __construct()
+    {
+        // middleware(auth) nam nece dozvoliti da vidimo postove ako nismo ulogovani 
+        // osim za izuzetke a to su index i show dje mi mozemo da vidimo ostale postove 
+        // 
+        $this->middleware('auth' , ['except' => ['index','about','services']]);
+    }
+
     public function index() {
         $title = 'Welcome to Laravel';
         // return view('pages.index', compact('title'));   jedan od nacina da se prenese parametar na drugu stranicu

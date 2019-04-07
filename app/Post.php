@@ -12,5 +12,10 @@ class Post extends Model
     public $primarykey = 'id';
     // Time stamps
     public $timestamps = true;
+
+    public function user() {
+        // Post ima vezu sa korisnikom i pripada korisniku
+        return $this->belongsTo('App\User');
+    }
 }
 

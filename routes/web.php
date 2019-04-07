@@ -29,3 +29,6 @@ Route::get('/services', 'PagesController@services');
 
 // Moramo da stavimo u rute sve iz PostsController- a
 Route::resource('posts', 'PostsController');
+Auth::routes();
+
+Route::get('/dashboard', 'DashboardController@index');
